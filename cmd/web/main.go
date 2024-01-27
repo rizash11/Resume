@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 )
 
 func main() {
@@ -19,8 +19,6 @@ func main() {
 	if err != nil {
 		app.ErrorLog.Fatalln(err)
 	}
-
-	fmt.Println(app.TemplateCache)
 
 	// Determine port for HTTP service.
 	port := os.Getenv("PORT")
@@ -38,4 +36,33 @@ func main() {
 	app.InfoLog.Println("Starting a server at http://localhost:" + port)
 	app.ErrorLog.Fatalln(srv.ListenAndServe())
 
+}
+
+type NeuteredFileSystem struct {
+	fs http.FileSystem
+}
+
+func (nfs NeuteredFileSystem) Open(path string) (http.File, error) {
+	f, err := nfs.fs.Open(path)
+	if err != nil {
+		return nil, err
+	}
+
+	s, err := f.Stat()
+	if err != nil {
+		return nil, err
+	}
+
+	if s.IsDir() {
+		index := filepath.Join(path, "index.html")
+		if _, err := nfs.fs.Open(index); err != nil {
+			closeErr := f.Close()
+			if closeErr != nil {
+				return nil, closeErr
+			}
+			return nil, err
+		}
+	}
+
+	return f, nil
 }

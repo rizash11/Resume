@@ -6,7 +6,7 @@ func (app *application) RegisterRoutes() {
 	SrvMux := http.NewServeMux()
 	SrvMux.HandleFunc("/", app.Home)
 
-	SrvMux.Handle("/static/", http.StripPrefix("/static", http.FileServer(http.Dir("./ui/static/"))))
+	SrvMux.Handle("/static/", http.StripPrefix("/static", http.FileServer(NeuteredFileSystem{http.Dir("./ui/static/")})))
 
 	app.SrvMux = SrvMux
 }
