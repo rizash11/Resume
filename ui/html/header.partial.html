@@ -1,1 +1,21 @@
-{{define "header"}}{{end}}
+{{define "header"}}
+<form id="header">
+  <input
+    id="RadioPage1"
+    type="radio"
+    name="page"
+    value="page1"
+    onchange="switchPage(1)"
+    checked
+  />
+  <label id="LabelPage1" for="RadioPage1"> Resume </label>
+  <input
+    id="RadioPage2"
+    type="radio"
+    name="page"
+    value="page2"
+    onchange="switchPage(2)"
+  />
+  <label id="LabelPage2" for="RadioPage2">Projects</label>
+</form>
+{{end}}

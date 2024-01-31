@@ -1,3 +1,95 @@
 h1 {
-  color: red;
+  font-size: 200%;
+}
+
+#contacts h5 {
+  padding: auto auto 0 auto;
+  margin: auto auto 0 auto;
+  color: darkgray;
+}
+
+#contacts p {
+  padding: 0 auto 0 2vh;
+  padding-left: 2vh;
+  margin: 0;
+}
+
+#resume-body section {
+  padding: 2vh;
+  margin: 0 0 1vh 0;
+  width: 40vw;
+  break-inside: avoid;
+}
+
+#profile-photo {
+  height: 20vh;
+  width: 20vh;
+  border-radius: 10vh;
+  padding: 1vh;
+  margin: 0;
+}
+
+#name-photo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(38, 38, 38);
+  color: whitesmoke;
+  padding: 0 10vh 0 10vh;
+  /* margin-bottom: 1vh; */
+}
+
+#resume-body {
+  color: black;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1vh 0 0 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+}
+
+#header label {
+  width: 50%;
+  text-align: center;
+  background-color: rgb(250, 235, 215);
+}
+
+#header label:hover {
+  cursor: pointer;
+}
+
+#header input {
+  position: absolute;
+  opacity: 0;
+}
+
+#RadioPage1:checked + #LabelPage1,
+#RadioPage2:checked + #LabelPage2 {
+  background-color: rgb(230, 205, 185);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  padding: 0 10vh 0 10vh;
+  font-family: "Cardo";
+  font-size: 105%;
+}
+
+.list-margins {
+  margin: 0;
+  padding: 0 0 0 2vh;
+}
+
+#page1 {
+  border: 3px solid darkgray;
+  background-color: rgb(255, 255, 255);
 }
