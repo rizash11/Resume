@@ -19,8 +19,7 @@ function init() {
   }
 
   const ageBlock = document.querySelector("#age");
-  ageBlock.innerHTML =
-    "male, " + age.toString() + " years, born 29 October 1998";
+  ageBlock.innerHTML = age.toString() + " years, born 29 October 1998";
   // *************************************************************************** //
 
   // *** SELECTING A PAGE *** //
