@@ -1,0 +1,24 @@
+#header {
+  display: flex;
+  flex-direction: row;
+}
+
+#header label {
+  width: 45%;
+  text-align: center;
+  background-color: rgb(250, 235, 215);
+}
+
+#header label:hover {
+  cursor: pointer;
+}
+
+#header input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+#RadioPage1:checked + #LabelPage1,
+#RadioPage2:checked + #LabelPage2 {
+  background-color: rgb(230, 205, 185);
+}
