@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function init() {
-  console.log("I am here");
-
-  // CALCULATING AGE *********************************************************** //
+  // *** CALCULATING AGE ***
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const currentMonth = currentDate.getUTCMonth() + 1;
@@ -20,18 +18,36 @@ function init() {
 
   const ageBlock = document.querySelector("#age");
   ageBlock.innerHTML = age.toString() + " years, born 29 October 1998";
-  // *************************************************************************** //
-
-  // *** SELECTING A PAGE *** //
-  // console.log(document.querySelector('input[name="page"]:checked').value); // -- also works
+  // ***********************
+  //
+  //
+  //
+  //
+  //
+  // *** SELECTING A PAGE ***
   if (document.getElementById("RadioPage1").checked) {
     switchPage(1);
   } else {
     switchPage(2);
   }
+  // ************************
+  //
+  //
+  //
+  //
+  //
+  // *** SELECTING A SECTION ***
+  switchSection();
 
-  // ************************ //
+  // ***************************
 }
+
+//
+//
+//
+//
+//
+//
 
 function switchPage(pageNum) {
   if (pageNum === 1) {
@@ -39,8 +55,19 @@ function switchPage(pageNum) {
     document.querySelector("#page2").style.display = "none";
   } else if (pageNum === 2) {
     document.querySelector("#page1").style.display = "none";
-    document.querySelector("#page2").style.display = "block";
+    document.querySelector("#page2").style.display = "flex";
   }
 }
 
-//
+function switchSection() {
+  let sectionID = document.querySelector(
+    'input[name="menuOption"]:checked'
+  ).value;
+
+  let sections = document.querySelectorAll("#page2 section");
+  sections.forEach((section) => (section.style.display = "none"));
+  document.querySelector("#page2 #" + sectionID).style.display = "block";
+  document.querySelector(
+    "#page2 #" + sectionID + "Label"
+  ).style.backgroundColor = "rgb(230, 205, 185)";
+}

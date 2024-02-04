@@ -1,0 +1,71 @@
+#page2 {
+  display: flex;
+  flex-direction: row;
+}
+
+/*  */
+/*  */
+/*  */
+/**** Menu Styles ****/
+
+#page2 menu {
+  background-color: RGB(250, 235, 215);
+  color: rgb(70, 70, 70);
+  margin: 0;
+  padding: 2vh 1vw 2vh 2vw;
+  text-align: right;
+
+  width: 10vw;
+  min-width: 90px;
+}
+
+#page2 menu div {
+  padding-right: 1vw;
+  border-right: 2px solid darkgray;
+}
+
+#page2 menu input[type="radio"] {
+  display: none;
+}
+
+#page2 menu h2,
+#page2 menu h3,
+#page2 menu h4 {
+  margin: 0;
+}
+
+#page2 menu label:hover {
+  cursor: pointer;
+}
+
+/*********************/
+
+/*  */
+/*  */
+/*  */
+
+/* *** Section Styles *** */
+
+#page2 section {
+  display: none;
+  color: black;
+  background-color: rgb(229, 246, 223);
+  padding: 3vw;
+  flex-grow: 1;
+}
+
+#page2 #diploma {
+  text-align: center;
+}
+
+#page2 iframe {
+  width: 90%;
+  height: 80vh;
+  min-height: 500px;
+}
+
+/* ********************** */
+
+/*  */
+/*  */
+/*  */

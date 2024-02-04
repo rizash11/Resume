@@ -1,3 +1,55 @@
 {{define "page2"}}
-<h1>Second page 1</h1>
+<menu id="menu">
+  <div>
+    <h2>Projects</h2>
+
+    <label id="generalLabel">
+      <input
+        type="radio"
+        name="menuOption"
+        checked
+        value="general"
+        onchange="switchSection()"
+      />
+      <h4>General</h4>
+    </label>
+
+    <hr />
+
+    <h3>Web projects</h3>
+
+    <label id="diplomaLabel">
+      <input
+        type="radio"
+        name="menuOption"
+        value="diploma"
+        onchange="switchSection()"
+      />
+      <h4>Diploma</h4>
+    </label>
+  </div>
+</menu>
+
+<section id="general">
+  <a href="https://github.com/rizash11" target="_blank">github repository</a>
+</section>
+
+<section id="diploma">
+  <p>
+    This
+    <a
+      href="https://diploma-micro-biology-wmmjf2bdjq-bq.a.run.app/"
+      target="_blank"
+      >project</a
+    >
+    I wrote for a friend's diploma work. I did not yet learn any JavaSript at
+    that point, so it is purely HTML, CSS, and Golang. It's github repository is
+    <a
+      href="https://github.com/rizash11/Diploma-Micro-Biology/tree/saving_results"
+      target="_blank"
+      >here</a
+    >.
+  </p>
+  <iframe src="https://diploma-micro-biology-wmmjf2bdjq-bq.a.run.app/"></iframe>
+</section>
 {{end}}

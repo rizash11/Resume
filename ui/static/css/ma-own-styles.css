@@ -1,69 +1,6 @@
 @import "header.css";
-
-/* *** Head of the resume *** */
-#name-photo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  background-color: rgb(38, 38, 38);
-  color: whitesmoke;
-  padding: 0 10vh 0 10vh;
-  /* margin-bottom: 1vh; */
-}
-
-h1 {
-  font-size: 200%;
-}
-
-#profile-photo {
-  height: 20vh;
-  width: 20vh;
-  border-radius: 10vh;
-  padding: 1vh;
-  margin: 0;
-}
-/* ************************** */
-
-/*  */
-/*  */
-/*  */
-
-/* *** Resume body *** */
-
-#resume-body {
-  color: black;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0 5vw 0 5vw;
-}
-
-#resume-body section {
-  margin: 0 0 3vh 0;
-
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-}
-
-#resume-body section h3 {
-  width: 30%;
-  margin: 0;
-  padding: 0;
-}
-
-#resume-body section div {
-  width: 60%;
-  margin-bottom: 2vh;
-}
-
-#resume-body section div p {
-  margin: auto;
-  text-align: left;
-}
+@import "page1.css";
+@import "page2.css";
 
 body {
   margin: 0;
@@ -73,26 +10,6 @@ body {
   font-family: "Cardo";
   font-size: 105%;
 }
-
-#page1 {
-  border: 3px solid darkgray;
-  background-color: rgb(255, 255, 255);
-  margin-bottom: 10vh;
-}
-
-p {
-  margin: 0;
-}
-
-hr {
-  width: 100%;
-  color: black;
-  border-top: 1px solid black;
-  margin: 1vh;
-  padding: 0;
-}
-
-/* ******************* */
 
 /*  */
 /*  */
@@ -125,6 +42,10 @@ hr {
 
   body {
     padding: 0 5vw 0 5vw;
+  }
+
+  iframe {
+    display: none;
   }
 }
 
